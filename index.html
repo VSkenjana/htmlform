@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+    <!-- The alternative to GET method would be the POST method. This 
+    would work effectively if we were connected to a live server, which 
+in this case, we're not. The GET method send you inputs to another page
+on your site. -->
+
+    <form action="results.html" method="GET" enctype="multipart/form-data">
+        <!-- Above, files are uploaded in multiple parts as some files can be large -->
+        <div>
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name" placeholder="login user" required>
+        </div>
+        <div>
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="email" required>
+        </div>
+        <!-- Min and max specify the lowest and highest possible numbers. Step controls by how much our number 
+        arrows can be clicked up or down. By what increments -->
+        <div>
+            <label>
+                Birthdate
+            <input type="number" name="age" placeholder="age" required min="1" max="200" step="1">
+        </label>
+        </div>
+        <!-- Required makes sure we cannot proceed without filling in that field! -->
+        <div>
+            <label for="name">Date</label>
+            <input type="date" name="date" id="date" placeholder="date" required>
+        </div>
+        <div>
+            Favourite Food
+            <div>
+                <label for="banana">banana</label>
+                <input type="checkbox" name="banana" id="banana">
+            </div>
+            <div>
+                <label for="peach">peach</label>
+                <input type="checkbox" name="peach" id="peach">
+            </div>
+        </div>
+        <!-- By specifying what gender next to the name attribute below, this ensures we cannot select 
+        both upon submission -->
+        <div>
+            Gender
+            <div>
+                <label for="male">Male</label>
+                <input type="radio" name="gender" id="male" value="male">
+            </div>
+            <div>
+                <label for="female">Female</label>
+                <input type="radio" name="gender" id="female" value="female">
+            </div>
+        </div>
+        <!-- The select attribute allows us a to create a dropdown offering different
+        options to select from. Multiple gives us the option to select
+    multiple choices.-->
+        <div>
+            <label for="eyeColor">Eye Color</label>
+            <select name="eyeColor" id="eyeColor" multiple>
+                <option value="Green">Green</option>
+                <option value="Red">Red</option>
+                <option value="Brown">Brown</option>
+                <option value="Blue">Blue</option>
+            </select>
+        </div>
+        <!-- End user submits text characters to whatever limit.  -->
+        <div>
+            <label for="bio">Bio</label>
+            <textarea type="bio" name="bio"></textarea>
+        </div>
+        <!-- not see by the end user until form is submitted. -->
+        <div>
+            <input type="hidden" value="hidden" aria-valuemax="HI">
+        </div>
+        <!-- the ability to upload files from local environment. -->
+        <div>
+            <label for="file">File Upload</label>
+            <input  id="file" type="file" name="file">
+        </div>
+        <!-- End users will be be given a number pad on screen to 
+        enter this option -->
+        <div>
+            <label for="phone">Phone</label>
+            <input type="tel" name="phone" id="phone">
+        </div>
+        <div>
+            <label for="url">URL</label>
+            <input type="url" name="url" id="url">
+        </div>
+        <div>
+            <label>
+                Password
+            <input type="password" name="password" placeholder="password" required>
+        </label>
+        </div>
+        <div>
+            <label for="color">Color</label>
+            <input type="color" name="color" id="color">
+        </div>
+        
+        <div>
+            <button type="reset">Reset</button>
+            <button type="submit">Submit</button>
+        </div>
+
+    </form>
+</body>
+</html>
